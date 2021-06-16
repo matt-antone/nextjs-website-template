@@ -1,0 +1,77 @@
+---
+label: Profile
+hide_body: false
+fields:
+- type: include
+  name: ''
+  label: ''
+  template: block-hero
+- type: text
+  name: title
+  label: Title
+  description: This field is used to identify the profile and the page title.
+  config:
+    required: true
+- type: text
+  name: meta_title
+  label: Meta Title
+  description: 'Title displayed by search engines. Over 60 characters my negatively
+    impact your score. '
+- type: number
+  name: order
+  label: Order
+  description: Enter a number for where this profile should appear when all profiles
+    are listed.
+  config:
+    required: true
+- type: tag_list
+  name: profile_key
+  label: Profile Key
+  description: This is the text you will use to relate this profile to a post
+- type: text
+  name: first_name
+  label: First Name
+  config:
+    required: true
+- type: text
+  name: middle_name
+  label: Middle Name
+  config:
+    required: false
+- type: text
+  name: last_name
+  label: Last Name
+  config:
+    required: true
+- type: text
+  label: Degrees & Certifications
+  name: degrees
+  description: Enter a comma separated list of degrees or certifications
+- type: text
+  name: phone
+  label: Phone
+- type: text
+  name: email
+  label: Email
+- type: text
+  label: Position
+  name: position
+  description: Please enter this person's position in the company.
+- type: include
+  name: social_accounts
+  label: Social Accounts
+  template: social-accounts
+- type: list
+  label: Accolades
+  name: accolades
+  config:
+    use_select: false
+    source:
+      type: documents
+- type: list
+  label: Professional Affiliations
+  name: professional_affiliations
+- type: file
+  label: Featured Image
+  name: featured_image
+  description: This is used for display on other pages not the hero header

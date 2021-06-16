@@ -1,0 +1,8 @@
+---
+label: Post
+hide_body: false
+fields:
+- type: include
+  name: page_attributes
+  label: Post Attributes
+  template: attributes-posts

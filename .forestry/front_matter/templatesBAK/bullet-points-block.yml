@@ -1,0 +1,20 @@
+---
+label: Bullet Points Block
+hide_body: true
+display_field: bullet_points
+fields:
+- type: include
+  name: color_options
+  label: Color Options
+  template: options-color
+- type: text
+  name: header_text
+  label: Header Text
+- type: file
+  name: header_icon
+  label: Header Icon
+- type: blocks
+  name: bullet_points
+  label: Bullet Points
+  template_types:
+  - bullet-point-content

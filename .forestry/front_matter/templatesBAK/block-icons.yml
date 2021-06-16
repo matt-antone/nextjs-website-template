@@ -1,0 +1,65 @@
+---
+label: Icon Block
+hide_body: false
+display_field: overview_text
+fields:
+- type: textarea
+  name: overview_text
+  label: Overview Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: field_group_list
+  name: icon_blocks
+  label: Icon Blocks
+  config:
+    max: '6'
+  fields:
+  - type: file
+    name: icon
+    label: Icon
+    description: Add an icon
+  - type: textarea
+    name: text
+    label: Text
+    description: Add text
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: select
+    name: icon_animation
+    config:
+      source:
+        type: simple
+      options:
+      - fade
+      - fade-up
+      - fade-down
+      - fade-left
+      - fade-right
+      - fade-up-right
+      - fade-up-left
+      - fade-down-right
+      - fade-down-left
+      - flip-up
+      - flip-down
+      - flip-left
+      - flip-right
+      - slide-up
+      - slide-down
+      - slide-left
+      - slide-right
+      - zoom-in
+      - zoom-in-up
+      - zoom-in-down
+      - zoom-in-left
+      - zoom-in-right
+      - zoom-out
+      - zoom-out-up
+      - zoom-out-down
+      - zoom-out-left
+      - zoom-out-right
+    label: Icon Animation
+    default: ''

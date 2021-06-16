@@ -1,0 +1,8 @@
+---
+label: Docs
+hide_body: false
+fields:
+- type: include
+  name: page_attributes
+  label: Page Attributes
+  template: attributes-page

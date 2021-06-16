@@ -1,0 +1,30 @@
+---
+label: Landing Page
+hide_body: true
+fields:
+- type: include
+  name: page_attributes
+  label: Page Atributes
+  template: attributes-page
+- type: include
+  name: hero
+  label: Hero
+  template: block-hero
+- type: include
+  name: content_blocks
+  label: Content Blocks
+  template: blocks
+  description: Add content in blocks
+- type: text
+  hidden: true
+  config:
+    required: false
+  default: landing-page
+  label: Layout
+  name: layout
+pages:
+- _content/services/individual/business-executive.md
+- _content/services/individual/doctors-physicians.md
+- _content/services/individual/finance-and-legal.md
+- _content/services/individual/software-engineer-developer.md
+- _content/services/trusts-estates.md

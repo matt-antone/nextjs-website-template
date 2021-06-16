@@ -1,0 +1,48 @@
+---
+label: Content Block (4 columns)
+hide_body: false
+display_field: column_1
+fields:
+- type: include
+  template: options-color
+  name: color_options
+  label: Color Options
+- type: textarea
+  name: block_overview
+  label: Block Overview
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: column_1
+  label: Column 1
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: column_2
+  label: Column 2
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: column_3
+  label: Column 3
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: column_4
+  label: Column 4
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: include
+  template: options-advanced
+  name: advanced_options
+  label: Advanced Options

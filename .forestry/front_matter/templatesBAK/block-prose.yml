@@ -1,0 +1,13 @@
+---
+label: Block Prose
+hide_body: true
+fields:
+- name: block_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Block Text

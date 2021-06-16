@@ -1,0 +1,203 @@
+---
+label: Site-Data
+hide_body: true
+fields:
+- type: text
+  name: SITE_NAME
+  label: Site Name
+  description: Usually the name of the company or brand.
+- type: text
+  name: SITE_DESC
+  label: Site Description
+  description: Describe your company here.
+  config:
+    required: true
+- type: text
+  name: BASEURL
+  label: Base URL
+  description: Enter the URL of your home page.
+- type: file
+  name: SEO_LOGO
+  label: SEO Logo
+  description: Used by Google and others. Not displayed on this website.
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+  description: Images of your business. You can use interior, exterior, events &amp;
+    casual images. Do not use logos.
+- type: field_group
+  name: ORG
+  fields:
+  - type: text
+    name: name
+    label: Name
+  - name: type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Airline
+      - Consortium
+      - Corporation
+      - EducationalOrganization
+      - FundingScheme
+      - GovernmentOrganization
+      - LibrarySystem
+      - LocalBusiness
+      - MedicalOrganization
+      - NGO
+      - NewsMediaOrganization
+      - PerformingGroup
+      - Project
+      - SportsOrganization
+      - WorkersUnion
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Type
+    description: 'Select a type that best describes your organization. '
+  - type: text
+    name: context
+    label: context
+    config:
+      required: true
+    hidden: true
+    default: https://schema.org
+  - type: text
+    name: url
+    label: URL
+    description: Usually the same as the Base URL. But you can specify another.
+  label: Organization Info
+  description: Some basic information about your company.
+- type: field_group
+  name: BUSINESS
+  label: Business Info
+  fields:
+  - name: type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - AnimalShelter
+      - ArchiveOrganization
+      - AutomotiveBusiness
+      - ChildCare
+      - Dentist
+      - DryCleaningOrLaundry
+      - EmergencyService
+      - EmploymentAgency
+      - EntertainmentBusiness
+      - FinancialService
+      - FoodEstablishment
+      - GovernmentOffice
+      - HealthAndBeautyBusiness
+      - HomeAndConstructionBusiness
+      - InternetCafe
+      - LegalService
+      - Library
+      - LodgingBusiness
+      - MedicalBusiness
+      - ProfessionalService
+      - RadioStation
+      - RealEstateAgent
+      - RecyclingCenter
+      - SelfStorage
+      - ShoppingCenter
+      - SportsActivityLocation
+      - Store
+      - TelevisionStation
+      - TouristInformationCenter
+      - TravelAgency
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Business Type
+    description: Select a type that best describes your business.
+  - type: text
+    name: id
+    label: Site ID
+    description: Usually a URL using a subdomain that will never change. Like "www".
+  - type: text
+    name: phone
+    label: Phone
+    description: 'Use the International format: +1 123-123-1234'
+  - type: field_group
+    name: address
+    label: Address
+    fields:
+    - type: text
+      name: streetAddress
+      label: Street Address
+      description: Full street address including suite or unit number
+    - type: text
+      name: addressLocality
+      label: City
+    - type: text
+      name: addressRegion
+      label: State
+    - type: text
+      name: postalCode
+      label: Zip Code
+    - type: text
+      name: addressCountry
+      label: Country
+  - name: display_business_hours
+    type: boolean
+    label: Display Business Hours
+  - type: field_group_list
+    name: openingHours
+    label: Business Hours
+    fields:
+    - name: name
+      type: text
+      config:
+        required: true
+      label: Name
+      description: Used for organizational reasons.
+    - name: dayOfWeek
+      type: list
+      config:
+        use_select: true
+        min: 
+        max: 
+        source:
+          type: simple
+        options:
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+        - Saturday
+        - Sunday
+      label: Days of the week
+    - type: text
+      name: opens
+      label: Opens
+    - type: text
+      name: closes
+      label: Closes
+    - type: datetime
+      name: validFrom
+      label: Valid From
+    - type: datetime
+      name: validThrough
+      label: Valid Through
+      description: 'Add a date in the future. '
+    showOnly:
+      field: display_business_hours
+      value: true
+    description: Add your business hours. Only include the days your business is open.
+    config:
+      labelField: name
+  description: Some specifics about your business. This info is used by Google for
+    their Local Business listings.
+pages:
+- _data/site-data.json

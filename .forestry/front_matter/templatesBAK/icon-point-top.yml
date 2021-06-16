@@ -1,0 +1,60 @@
+---
+label: Top Icon Block
+hide_body: false
+display_field: header_text
+fields:
+- type: file
+  name: icon
+  label: Icon
+- type: select
+  name: icon_animation
+  config:
+    source:
+      type: simple
+    options:
+    - fade
+    - fade-up
+    - fade-down
+    - fade-left
+    - fade-right
+    - fade-up-right
+    - fade-up-left
+    - fade-down-right
+    - fade-down-left
+    - flip-up
+    - flip-down
+    - flip-left
+    - flip-right
+    - slide-up
+    - slide-down
+    - slide-left
+    - slide-right
+    - zoom-in
+    - zoom-in-up
+    - zoom-in-down
+    - zoom-in-left
+    - zoom-in-right
+    - zoom-out
+    - zoom-out-up
+    - zoom-out-down
+    - zoom-out-left
+    - zoom-out-right
+  label: Icon Animation
+  default: ''
+- type: text
+  name: header_text
+  label: Header Text
+- type: text
+  name: header_link
+  label: Header Link
+  description: Use a full URL
+- type: textarea
+  name: video_embed_code
+  label: Video Embed Code
+- type: textarea
+  name: text
+  label: Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

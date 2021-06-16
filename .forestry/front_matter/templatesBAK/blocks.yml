@@ -1,0 +1,25 @@
+---
+label: Content Blocks
+hide_body: false
+display_field: content_blocks
+fields:
+- type: blocks
+  name: content_blocks
+  label: Content Blocks
+  description: Add content in blocks.
+  template_types:
+  - call-to-action-button
+  - lead-paragraph
+  - block-1
+  - block-2
+  - block-3
+  - block-4
+  - block-icons
+  - bullet-points-block
+  - icon-point
+  - icon-point-top
+  - sales-funnel-block
+  - image-block
+  - logo-block
+  - block-carousel
+  - block-prose

@@ -1,0 +1,33 @@
+@layer utilities {
+  .hero-mask {
+    mask: url(/heroMask.svg);
+    mask-size: 100%;
+    mask-mode: alpha, match-source;
+    mask-repeat: no-repeat;
+  }
+
+  .list-none {
+    padding-left: 0 !important;
+  }
+
+  .list-none:before {
+    display: none !important;
+  }
+
+  ul.lets-talk {
+    @apply py-8;
+  }
+
+  ul.lets-talk li {
+    @apply my-4;
+  }
+
+  ul.lets-talk li a{
+    @apply flex justify-center items-center w-full bg-brand-secondary text-base text-white p-2 rounded hover:bg-brand-blue-light hover:text-brand-blue whitespace-nowrap;
+    text-decoration: none;
+  }
+
+  .input {
+    @apply p-4 mb-8 shadow-sm border-gray-700 border focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md;
+  }
+}

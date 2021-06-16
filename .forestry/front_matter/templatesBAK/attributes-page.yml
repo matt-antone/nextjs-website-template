@@ -1,0 +1,55 @@
+---
+label: Page Attribute Fields
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: slug
+  label: Slug
+  description: The is how the page is named in the URL. Usually the post title, but
+    you can use anything you want.
+- type: text
+  name: meta_title
+  label: Meta Title
+  description: 'Title displayed by search engines. Over 60 characters my negatively
+    impact your score. '
+- type: textarea
+  name: page_description
+  label: Page Description
+  description: page description
+- name: featured_image
+  type: file
+  config:
+    maxSize: 64
+  label: Featured Image
+- name: featured_image_alt
+  type: text
+  config:
+    required: false
+  label: Featured Image Alt Text
+  description: Required for WCAG compliance. Describe the picture in a few words.
+- type: tag_list
+  name: categories
+  label: Categories
+- type: tag_list
+  name: tags
+  label: Tags
+- type: tag_list
+  name: keywords
+  label: Keywords
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: list
+  name: aliases
+  label: Aliases
+  description: 'This works the same as a 301 Redirect. Enter a relative URL starting
+    at the root of the site. Example: /section-name/post-slug/'
+  config:
+    use_select: false
+    source:
+      type: documents

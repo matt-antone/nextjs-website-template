@@ -1,0 +1,14 @@
+---
+label: Page
+hide_body: false
+fields:
+- type: include
+  name: hero
+  label: Hero
+  template: block-hero
+- type: include
+  name: page_attributes
+  label: Page Attributes
+  template: attributes-page
+pages:
+- _content/services/index.md

@@ -1,0 +1,49 @@
+{
+  "SITE_NAME": "Navaign Wealth Partners",
+  "SITE_DESC": "temporary description",
+  "BASEURL": "https://navalign.com",
+  "SEO_LOGO": "https://res.cloudinary.com/navalign/image/upload/v1548912708/navalign-logo.png",
+  "GOOGLE_KEY": "AIzaSyDErYJ9tqAVkA4kOKZ77xOJXOFJr4nbnYM",
+  "ORG": {
+    "name": "Navalign Wealth Partners",
+    "context": "https://schema.org",
+    "type": "LocalBusiness",
+    "url": "https://navalign.com"
+  },
+  "BUSINESS": {
+    "type": "FinancialService",
+    "id": "http://www.navalign.com",
+    "phone": "+1 855-360-1080",
+    "address": {
+      "streetAddress": "15910 Ventura Blvd Suite 1605",
+      "addressLocality": "Encino",
+      "addressRegion": "CA",
+      "postalCode": "91436",
+      "addressCountry": "US"
+    },
+    "images": [
+
+    ],
+    "openingHours": [
+      {
+        "opens": "09:00",
+        "closes": "15:00",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "validFrom": "2019-12-23",
+        "validThrough": "2050-04-02T00:00:00-07:00",
+        "name": "Mon - Fri"
+      }
+    ],
+    "typeb": "FinancialService",
+    "display_business_hours": true
+  },
+  "images": [
+
+  ]
+}

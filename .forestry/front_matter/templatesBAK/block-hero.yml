@@ -1,0 +1,44 @@
+---
+label: Hero
+hide_body: false
+display_field: hero
+fields:
+- type: field_group
+  label: Hero
+  name: hero
+  description: Add a hero to this page.
+  fields:
+  - type: boolean
+    name: show_hero
+    label: Show Hero
+  - type: include
+    template: options-color
+    label: Hero color options
+    name: hero_color_options
+    description: Change the background and text colors.
+  - type: file
+    label: Hero Image
+    name: hero_image
+    description: Select an image (optional). Hero's with no image will show the background
+      set in Color Options
+  - type: textarea
+    name: hero_text
+    label: Hero Text
+    description: Enter text to display in the Hero
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: boolean
+    label: Show Start Here Button
+    name: show_start_here_button
+  - type: boolean
+    name: show_meeting_button
+    label: Show Meeting Button
+  - type: boolean
+    name: show_join_the_team_button
+    label: Show Join the Team Button
+  - type: textarea
+    name: video_embed
+    label: Video Embed
+    description: Copy and paste a video embed code

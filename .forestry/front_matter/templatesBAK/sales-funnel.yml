@@ -1,0 +1,23 @@
+---
+label: Sales Funnel
+hide_body: true
+fields:
+- type: include
+  name: hero
+  label: Hero
+  template: block-hero
+- type: file
+  name: featured_image
+  label: Featured Image
+- type: include
+  name: page_attributes
+  label: Page Attributes
+  template: attributes-page
+- type: include
+  template: blocks
+  label: Content Blocks
+  name: content_blocks
+- type: boolean
+  name: show_common_content
+  label: Show Common Content
+  default: true

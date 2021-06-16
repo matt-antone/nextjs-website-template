@@ -1,0 +1,16 @@
+---
+label: 'Logo Block '
+hide_body: false
+display_field: heading
+fields:
+- type: include
+  name: options-color
+  label: Color Options
+  template: options-color
+- type: textarea
+  label: Heading
+  name: heading
+- type: image_gallery
+  name: logos
+  label: Logos
+  default: []

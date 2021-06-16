@@ -1,0 +1,8 @@
+---
+label: Site Config
+hide_body: false
+fields:
+- type: text
+  name: cloudinary
+  label: Cloudinary Cloud Name
+  description: 'Enter your Cloudinary Cloud Name. You an find it here: https://cloudinary.com/console'

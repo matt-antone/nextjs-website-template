@@ -1,0 +1,10 @@
+---
+label: Lead Paragraph
+hide_body: false
+display_field: text
+fields:
+- type: textarea
+  name: text
+  label: Text
+  config:
+    required: true

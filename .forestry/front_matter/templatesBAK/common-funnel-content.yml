@@ -1,0 +1,10 @@
+---
+label: Common Funnel Content
+hide_body: true
+fields:
+- type: blocks
+  name: common_icon_blocks
+  label: Common Icon Blocks
+  description: These blocks will be added to the bottom of the page content.
+  template_types:
+  - icon-point-top

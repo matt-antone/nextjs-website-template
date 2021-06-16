@@ -1,0 +1,28 @@
+---
+label: Addresses
+hide_body: false
+fields:
+- type: field_group_list
+  name: addresses
+  label: Addresses
+  description: Add Addresses for the contact page and footer
+  fields:
+  - type: text
+    name: address_1
+    label: Address 1
+  - type: text
+    name: address_2
+    label: Address 2
+  - type: text
+    name: city
+    label: City
+  - type: text
+    name: state
+    label: State
+  - type: text
+    name: zip_code
+    label: Zip Code
+  - type: text
+    name: map_link
+    label: Map Link
+    description: URL to google map for this address

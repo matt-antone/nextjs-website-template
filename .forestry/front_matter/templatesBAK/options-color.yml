@@ -1,0 +1,21 @@
+---
+label: Color Options
+hide_body: false
+fields:
+- type: field_group
+  fields:
+  - type: text
+    name: bg_color
+    label: Background Color
+    description: 'Select a background color. Dark Blue: #0F5388 Medium Blue: #519ED6
+      Light Blue: #CCEBFF Black: #000000 White: #FFFFFF Gray: #6c757d'
+    default: ''
+  - type: text
+    label: Text Color
+    name: text_color
+    description: 'Select a text color. Dark Blue: #0F5388 Medium Blue: #519ED6 Light
+      Blue: #CCEBFF Black: #000000 White: #FFFFFF Gray: #6c757d'
+    default: ''
+  label: Color Options
+  name: color_options
+  description: Change the background & text color

@@ -1,0 +1,20 @@
+---
+label: " Social Accounts"
+hide_body: false
+fields:
+- type: text
+  name: facebook
+  label: Facebook
+  description: URL to a facebook page or account
+- type: text
+  name: twitter
+  label: Twitter
+  description: URL to a twitter account
+- type: text
+  name: linked_in
+  label: LinkedIn
+  description: URL to a linked in account
+- type: text
+  name: instagram
+  label: Instagram
+  description: URL to an Instagram account

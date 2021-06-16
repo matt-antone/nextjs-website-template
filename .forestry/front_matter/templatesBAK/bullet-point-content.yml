@@ -1,0 +1,12 @@
+---
+label: Bullet Point Content
+hide_body: false
+display_field: text
+fields:
+- type: textarea
+  name: text
+  label: Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

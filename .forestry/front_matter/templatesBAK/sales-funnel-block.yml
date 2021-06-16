@@ -1,0 +1,16 @@
+---
+label: Sales Funnel Block
+hide_body: false
+display_field: overview_text
+fields:
+- type: include
+  name: options-color
+  label: Color Options
+  template: options-color
+- type: textarea
+  name: overview_text
+  label: Overview Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

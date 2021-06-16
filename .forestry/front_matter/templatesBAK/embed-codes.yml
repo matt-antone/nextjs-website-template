@@ -1,0 +1,17 @@
+---
+label: Embed Codes
+hide_body: false
+fields:
+- type: field_group_list
+  name: embed_code
+  label: Embed Code
+  fields:
+  - type: text
+    name: id
+    label: ID
+    description: 'Use a hyphen delineated phrase like: example-form-embed'
+  - type: textarea
+    name: embed_code
+    label: Embed Code
+  config:
+    labelField: id

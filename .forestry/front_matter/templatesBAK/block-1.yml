@@ -1,0 +1,19 @@
+---
+label: Content Block (1 column)
+hide_body: false
+fields:
+- type: include
+  name: options-color
+  label: Color Options
+  template: options-color
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Block Text
+  name: block_text
+- type: include
+  name: ''
+  label: ''
+  template: options-advanced

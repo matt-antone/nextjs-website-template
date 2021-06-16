@@ -1,0 +1,53 @@
+---
+label: Side Icon Block
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: file
+  name: icon
+  label: Icon
+- type: select
+  name: icon_animation
+  config:
+    source:
+      type: simple
+    options:
+    - fade
+    - fade-up
+    - fade-down
+    - fade-left
+    - fade-right
+    - fade-up-right
+    - fade-up-left
+    - fade-down-right
+    - fade-down-left
+    - flip-up
+    - flip-down
+    - flip-left
+    - flip-right
+    - slide-up
+    - slide-down
+    - slide-left
+    - slide-right
+    - zoom-in
+    - zoom-in-up
+    - zoom-in-down
+    - zoom-in-left
+    - zoom-in-right
+    - zoom-out
+    - zoom-out-up
+    - zoom-out-down
+    - zoom-out-left
+    - zoom-out-right
+  label: Icon Animation
+  default: fade-down
+- type: textarea
+  name: text
+  label: Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

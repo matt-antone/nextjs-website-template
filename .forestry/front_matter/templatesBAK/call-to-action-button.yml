@@ -1,0 +1,48 @@
+---
+label: Block Call to Action Button
+hide_body: false
+display_field: leading_text
+fields:
+- type: textarea
+  label: Leading Text
+  name: leading_text
+  description: Add content to appear above the button. Optional
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: field_group
+  name: button_options
+  label: Button
+  fields:
+  - type: include
+    name: colors
+    label: Colors
+    template: options-color
+  - type: text
+    name: button_text
+    label: Button Text
+  - type: text
+    name: url
+    label: Url
+    description: Enter a url. Enter "#" if you want to use the riskalizer. This is
+      void if you are using an embed code.
+  - type: boolean
+    name: new_window
+    label: Open Link in a new window
+    description: Open the url above in a new tab or window.
+  - type: textarea
+    name: embed_code
+    label: Embed Code
+    description: Enter an embed code to open in a modal window. The overrides the
+      above URL.
+  - type: text
+    name: extra_classes
+    label: Extra Classes
+    description: Add all the space separated classes you need. Add "rsk-lgq" if you
+      want to use the riskalizer.
+- type: include
+  template: options-color
+  label: Block Colors
+  name: block_colors
+  description: Specify a background and text color for this block.

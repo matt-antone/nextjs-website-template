@@ -1,0 +1,19 @@
+---
+label: Image 2 Column Block
+hide_body: false
+display_field: text
+fields:
+- type: include
+  name: options-color
+  label: Color Options
+  template: options-color
+- type: textarea
+  label: Text
+  name: text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: file
+  name: image
+  label: Image
