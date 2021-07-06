@@ -16,6 +16,7 @@ import {
 import Head from 'next/head'
 import Hero from '@components/Hero'
 import Layout from '@components/Layout'
+import dateFormat from 'dateformat';
 
 const ShareButtons = dynamic( () => import('@components/ShareButtons'),{ssr: false})
 
@@ -74,6 +75,9 @@ export const getStaticProps = async (context) => {
 
   const { content, data } = matter(source)
   const pageSource = await serialize(content)
+
+  const pDate = new Date(data.date)
+  data.date = dateFormat(pDate,'paddedShortDate')
 
   return {
     props: {
