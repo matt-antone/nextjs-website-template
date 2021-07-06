@@ -1,9 +1,14 @@
-import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-function LinkEmail(props) {
-  return props.email ? (
-    <a href={`mailto:${props.email}`}>
-      {props.email}
+
+export default function LinkEmail({email,text}) {
+  return email ? (
+    <a
+      href={`mailto:${email}`}
+      className="inline-flex text-brand-primary">
+        <span className="pr-1"><FontAwesomeIcon icon={faEnvelope} /></span>
+        { text ? (<span>{text}</span>) : '' }
     </a>
   ): '';
 }

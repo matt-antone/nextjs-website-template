@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import CloudinaryImage from "../CloudinaryImage"
+import Image from 'next/image'
 import Block from "./Block"
 import BlockContainer from "./BlockContainer"
 
@@ -10,11 +10,11 @@ export default function LogoBlock({heading,logos}) {
   })
   return (
     <Block>
-      <div className="bg-brand-blue-light py-16">
+      <div className="bg-brand-light py-16">
         <BlockContainer landingPage={true}>
           {
               heading ? (
-                <h2 className="text-3xl font-extrabold text-brand-blue text-center">
+                <h2 className="text-3xl font-extrabold text-brand-primary text-center">
                   {heading}
                 </h2>
               ) : ''
@@ -25,7 +25,7 @@ export default function LogoBlock({heading,logos}) {
                   (logo, i) => {
                     return (
                       <div key={i} className="mt-4 ml-8 p-2 flex-2 lg:p-0 lg:flex-1 lg:ml-4" data-aos="fade-down">
-                        <CloudinaryImage
+                        <Image
                           src={logo.image}
                           className="h-7 w-full block object-contain mx-auto "
                           width={250}

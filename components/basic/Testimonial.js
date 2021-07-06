@@ -1,8 +1,8 @@
 /*
   This Testimonial requires Tailwind CSS v2.0+
-  
+
   This Testimonial requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   module.exports = {
@@ -16,25 +16,24 @@
 */
 
 import BlockContainer from "@components/blocks/BlockContainer";
-import CloudinaryImage from "@components/CloudinaryImage";
-
+import Image from 'next/image'
 
 export default function Testimonial({content}) {
   return (
     <div className="bg-white pt-16 lg:py-24">
-      <div className="pt-8 lg:pt-0 pb-16 bg-brand-blue lg:pb-0 lg:z-10 lg:relative">
+      <div className="pt-8 lg:pt-0 pb-16 bg-brand-primary lg:pb-0 lg:z-10 lg:relative">
         <BlockContainer>
           <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
             <div className="relative lg:-my-8">
               <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden" />
               <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
                 <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full hidden lg:block">
-                  <CloudinaryImage
-                    src={content.image}
+                  <Image
                     width={480}
                     height={640}
-                    transform={'w_480,h_640,c_fill,f_auto'}
-                    className="w-full h-full object-cover"
+                    objectFit="cover"
+                    src={content.image}
+                    role="presentation"
                   />
                 </div>
               </div>
@@ -55,7 +54,7 @@ export default function Testimonial({content}) {
                   </div>
                   <footer className="mt-6">
                     <p className="font-medium text-white text-3xl lg:text-xl xl:text-3xl">{content.author}</p>
-                    <p className="text-base font-medium text-brand-blue-light text-xl">{content.profession}</p>
+                    <p className="text-base font-medium text-brand-light text-xl">{content.profession}</p>
                   </footer>
                 </blockquote>
               </div>

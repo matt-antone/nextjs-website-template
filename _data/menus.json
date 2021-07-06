@@ -1,0 +1,28 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "short": "Home",
+      "href": "/index.md"
+    },
+    {
+      "name": "Blog",
+      "short": "Blog",
+      "href": "/blog/index.md"
+    }
+  ],
+  "mobile": [
+    {
+      "name": "Home",
+      "short": "Home",
+      "href": "/index.md"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Home",
+      "short": "Home",
+      "href": "/index.md"
+    }
+  ]
+}

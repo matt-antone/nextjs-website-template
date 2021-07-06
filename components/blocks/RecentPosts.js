@@ -1,7 +1,7 @@
-import CloudinaryImage from '../CloudinaryImage'
+import Image from 'next/image'
 import Block from './Block';
 import BlockContainer from './BlockContainer';
-import ArticleCardLink from '../basic/ArticleCardLink'
+import ArticleCardLink from '../basic/LinkCardArticle'
 
 export default function RecentPosts({posts}) {
   const sorted = posts.sort(function (a, b) {
@@ -13,7 +13,7 @@ export default function RecentPosts({posts}) {
         <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6">
           <BlockContainer landingPage={true}>
             <div className="text-center">
-              <h2 className="text-3xl tracking-tight font-extrabold text-brand-blue sm:text-4xl">Updates</h2>
+              <h2 className="text-3xl tracking-tight font-extrabold text-brand-primary sm:text-4xl">Updates</h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
               </p>

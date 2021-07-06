@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import CloudinaryImage from '../CloudinaryImage';
+import Image from 'next/image'
 import Block from './Block';
 import BlockContainer from './BlockContainer';
 
@@ -8,8 +8,8 @@ function BulletPoinstBlock({bulletPoints,landingPage,headerText,headerIcon,}) {
   return (
     <Block>
       <BlockContainer>
-        <div className="rounded rounded-xl bg-brand-blue-light px-8 pb-8">
-            <CloudinaryImage
+        <div className="rounded rounded-xl bg-brand-light px-8 pb-8">
+            <Image
               src={headerIcon}
               width={300}
               height={300}

@@ -7,7 +7,6 @@ import ImageBlock from './ImageBlock'
 import LeadParagraph from './LeadParagraph'
 import LogoBlock from './LogoBlock'
 import ProseBlock from './ProseBlock'
-import SalesFunnel from './SalesFunnelBlock'
 import VideoBlock from './VideoBlock'
 
 const getComponentName = (template) => {
@@ -65,11 +64,6 @@ const renderBlocks = (blocks,landingPage) => {
                 logos={block.logos}/>
       case 'block-prose':
         return <ProseBlock
-                key={i}
-                landingPage={landingPage}
-                text={block.text}/>
-      case 'sales-funnel-block':
-        return <SalesFunnel
                 key={i}
                 landingPage={landingPage}
                 text={block.text}/>

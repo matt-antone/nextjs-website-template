@@ -38,16 +38,16 @@ function ShareButtons({url,title}) {
         Share
       </div>
       <EmailShareButton url={url} subject={subject} body={body}>
-        <Envelope className="mr-4 text-brand-secondary hover:text-brand-blue" width={30} height={30}/>
+        <Envelope className="mr-4 text-brand-secondary hover:text-brand-primary" width={30} height={30}/>
       </EmailShareButton>
       <FacebookShareButton url={url}>
-        <Facebook className="mr-4 text-brand-secondary hover:text-brand-blue" width={30} height={30}/>
+        <Facebook className="mr-4 text-brand-secondary hover:text-brand-primary" width={30} height={30}/>
       </FacebookShareButton>
       <LinkedinShareButton url={url} title={title} source={'Sitename'} summary={'summary'}>
-        <LinkedIn className="mr-4 text-brand-secondary hover:text-brand-blue" width={30} height={30}/>
+        <LinkedIn className="mr-4 text-brand-secondary hover:text-brand-primary" width={30} height={30}/>
       </LinkedinShareButton>
       <TwitterShareButton url={url} title={title}>
-        <Twitter className="mr-4 text-brand-secondary hover:text-brand-blue" width={30} height={30}/>
+        <Twitter className="mr-4 text-brand-secondary hover:text-brand-primary" width={30} height={30}/>
       </TwitterShareButton>
     </div>
   );

@@ -1,10 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {useEffect, useState} from 'react'
 import ReactMarkdown from 'react-markdown';
-import SalesFunnels from '../SalesFunnels'
 import funnels from '../../_data/funnels'
 import Modal from '../basic/Modal'
-import CloudinaryImage from '../CloudinaryImage'
+import Image from 'next/image'
 import Block from './Block';
 import BlockContainer from './BlockContainer';
 
@@ -28,7 +27,7 @@ export default function SalesFunnelBlock({text}) {
   return (
     <Block>
       <BlockContainer>
-        <div className="relative bg-brand-blue-light py-8 sm:py-24">
+        <div className="relative bg-brand-light py-8 sm:py-24">
             <div className="prose prose-lg text-center mx-auto">
               { text ? <ReactMarkdown children={text}/> : ''}
             </div>
@@ -42,7 +41,7 @@ export default function SalesFunnelBlock({text}) {
                   // data-aos-duration={2000}
                   // data-aos-delay={300+(i*10)}
                   >
-                    <CloudinaryImage
+                    <Image
                       src={funnel.icon}
                       className="block object-fit-contain h-32 mx-auto"
                       width={120}

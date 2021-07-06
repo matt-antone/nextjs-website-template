@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import CloudinaryImage from '../CloudinaryImage';
+import Image from 'next/image'
 import Block from './Block';
 import BlockContainer from './BlockContainer';
 
@@ -12,7 +12,7 @@ function IconBlock({icon,text,title,landingPage}) {
     <Block>
       <BlockContainer>
         <div data-aos="fade-right">
-          <CloudinaryImage
+          <Image
             src={icon}
             width={200}
             height={200}

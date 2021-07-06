@@ -1,6 +1,6 @@
-import CloudinaryImage from '@components/CloudinaryImage'
 import Summary from '@components/basic/Summary'
 import ReactMarkdown from 'react-markdown'
+import Image from 'next/image'
 
 function ArticleCard({post,summary = false}) {
   const {content,data,filePath} = post
@@ -8,15 +8,12 @@ function ArticleCard({post,summary = false}) {
     <div key={post.data.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div className="flex-shrink-0">
         <div className="aspect-w-16 aspect-h-9">
-          <CloudinaryImage
+          <Image
             src={post.data.featured_image}
             alt={post.data.featured_alt}
             width={300}
             height={250}
-            className="h-full w-full object-cover"
-            transform="w_300,ar_16:9,c_fill,g_auto,f_auto"
-            layout="responsive"
-            ariaHidden={true}
+            objectFit="cover"
           />
         </div>
         </div>

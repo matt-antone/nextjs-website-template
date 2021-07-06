@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const site = require('./_data/site-data')
 
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -14,9 +15,9 @@ module.exports = {
       red: colors.rose,
       yellow: colors.amber,
       blue: colors.blue,
-      'brand-blue': '#0f5388',
-      'brand-blue-light': '#CCEBFF',
-      'brand-secondary': '#2B7CB6',
+      'brand-primary': '#0f5388',
+      'brand-secondary': '#CCEBFF',
+      'brand-light': 'silver',
      },
      maxHeight: {
        'hero': '700px',
@@ -34,11 +35,11 @@ module.exports = {
             a: {
               color: theme('colors.brand-secondary'),
               '&:hover': {
-                color: theme('colors.brand-blue'),
+                color: theme('colors.brand-primary'),
               },
             },
             h1: {
-              color: theme('colors.brand-blue'),
+              color: theme('colors.brand-primary'),
             }
           },
         },

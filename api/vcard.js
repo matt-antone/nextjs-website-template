@@ -4,7 +4,7 @@ const phoneNumberFormatter = require('phone-number-formats');
 
 module.exports = async (req, res) => {
 
-  //console.log(req.query)
+  ////console.log(req.query)
     //create a new vCard
     const vCard = vCardsJS();
 
@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
 
     //you can also embed photos from files instead of attaching via URL
     if(req.query.image){
-      //console.log(decodeURIComponent(req.query.image))
+      ////console.log(decodeURIComponent(req.query.image))
       const photo = await getImage(decodeURIComponent(req.query.image));
       vCard.photo.embedFromString(photo)
     }
@@ -139,7 +139,7 @@ async function getImage(imageURL){
     )
     .catch(
         (error) => {
-            //console.log(error);
+            ////console.log(error);
         }
     )
 }

@@ -1,6 +1,7 @@
 import Fuse from 'fuse.js'
-import {posts,categories} from '../../cache/data'
-import fuseIndex from '../../cache/fuse-index'
+import posts from '../cache/data.json'
+import areas from '../cache/areas'
+import fuseIndex from '../cache/fuse-index'
 
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
@@ -12,21 +13,40 @@ const hasCat = (cats,cat) => {
   return has
 }
 
+// const getCategories = (posts) => {
+//   let cats = new Set()
+//   if(posts.length > 0){
+//     posts.forEach(element => {
+//       // //console.log(element)
+//       element.data.categories ? element.data.categories.forEach(cat => {
+//         cats.add(cat.toLowerCase().trim())
+//       }) : ''
+//     })
+//   }
+//   return cats ? [...cats].filter(onlyUnique).sort() : []
+// }
+
 const getCategories = (posts) => {
-  let cats = new Set()
-  if(posts.length > 0){
+  let Areas = new Set()
+  areas.forEach(area => {
+    const areaArray = area.id.split('/').filter(Boolean)
+    const areaSlug = areaArray[areaArray.length-1]
     posts.forEach(element => {
-      // console.log(element)
+      // //console.log(element)
       element.data.categories ? element.data.categories.forEach(cat => {
-        cats.add(cat.toLowerCase().trim())
+        if(area.data.title === cat){
+          //console.log(area.data.title,cat)
+          Areas.add(area)
+        }
       }) : ''
     })
-  }
-  return cats ? [...cats].filter(onlyUnique).sort() : []
+})
+  return Areas ? [...Areas].filter(onlyUnique) : []
 }
 
 export default (req, res) => {
-  const {page,per,q,section,filter} = req.query
+  const {page,per,q,section,filter,metaFilter} = req.query
+
 
   posts.filter( post => {
     return post.data.draft !== true ? true : false
@@ -41,15 +61,22 @@ export default (req, res) => {
 
 
   if(typeof(filter) !== 'undefined' && filter.length > 0){
-    console.log('filtering',filter)
+    //console.log('filtering',filter)
     filtered = filtered.filter( post => {
       const include = post.data.categories ? (hasCat(post.data.categories,filter) ? true : false) : false
-      include ? console.log(include,post.data.title) : null
       return include
     })
   }
 
-  console.log(posts.length)
+  if(typeof(metaFilter) !== 'undefined'){
+    //console.log('filtering meta',filter)
+    filtered = filtered.filter( post => {
+      const include = post.data[metaFilter.metaKey] ? (hasCat(post.data[metaFilter.metaKey],metaFilter.value) ? true : false) : false
+      return include
+    })
+  }
+
+  //console.log(posts.length)
 
 
 
@@ -94,7 +121,7 @@ export default (req, res) => {
     ignoreFieldNorm: false,
   }
 
-  console.log(filtered.length)
+  //console.log(filtered.length)
   // // initialize Fuse with the index
   const fuse = new Fuse(filtered, options)
 
@@ -104,10 +131,10 @@ export default (req, res) => {
     return res.item
   }) : filtered
 
-  console.log('items found',result.length)
+  //console.log('items found',result.length)
 
   result.filter(item => {
-    // console.log(item.data.title);
+    // //console.log(item.data.title);
     item ?
      true : false
   })

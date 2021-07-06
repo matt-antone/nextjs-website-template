@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown'
-import CloudinaryImage from '../CloudinaryImage'
+import Image from 'next/image'
 import Block from './Block'
 import BlockContainer from './BlockContainer'
 
@@ -10,7 +10,7 @@ export default function ImageBlock({text,image}) {
         <div className="relative bg-white">
           <div className="lg:absolute lg:inset-0">
             <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
-              <CloudinaryImage
+              <Image
                 className="h-auto w-full object-cover lg:absolute lg:h-full"
                 src={image}
                 alt=""

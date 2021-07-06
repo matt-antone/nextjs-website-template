@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import site from '../_data/site-data'
 
 class MyDocument extends Document {
   static async getStaticProps(ctx) {
@@ -19,27 +20,21 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://res.cloudinary.com"/>
           <link rel="dns-prefetch" href="https://res.cloudinary.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
-          <link rel="preconnect" href="https://unpkg.com"/>
           <link rel="preload"
                 as="style"
-                href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&display=swap" />
+                href={site.GOOGLE_FONT} />
           <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&display=swap"
+                href={site.GOOGLE_FONT}
                 media="print" onLoad="this.media='all'" />
-          <link
-                rel="preload"
-                as="style"
-                href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-                media="print" onLoad="this.media='all'"/>
           <noscript>
             <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&display=swap" />
+                href={site.GOOGLE_FONT} />
           </noscript>
+
         </Head>
         <body className={`w-full pb-16`}>
           <Main/>
           <NextScript/>
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         </body>
       </Html>
     )

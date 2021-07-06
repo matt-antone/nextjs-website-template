@@ -1,11 +1,8 @@
-import {convertImage} from '@components/CloudinaryImage'
-
-import { DefaultSeo,LocalBusinessJsonLd } from 'next-seo'
-import Footer from '../components/Footer'
-import Head from 'next/head'
-import Notifictation from '../components/Notification'
-import SiteHeader from '../components/SiteHeader'
-import SkipMenu from './basic/SkipMenu'
+import { DefaultSeo } from 'next-seo'
+import Footer from '@components/Footer'
+import Notifictation from '@components/Notification'
+import SiteHeader from '@components/SiteHeader'
+import SkipMenu from '@components/basic/SkipMenu'
 import note from '@data/notification.json'
 import site from '@data/site-data'
 
@@ -13,15 +10,6 @@ export default function Layout({ children,title = '',metaTitle = '', description
   const { BASE_URL,SITE_NAME,SITE_DESC,SEO_LOGO,ORG } = site
   return (
     <>
-      <Head>
-        { hero && hero.hero_image ? (
-          <link
-          rel="preload"
-          href={convertImage(hero.hero_image,608,510,'c_fill,g_auto')}
-          as="image"
-        />
-        ) : ''}
-      </Head>
       <DefaultSeo
         title={title}
         description={description}
@@ -35,10 +23,16 @@ export default function Layout({ children,title = '',metaTitle = '', description
         }}
       />
       <SkipMenu/>
-      <Notifictation note={note}/>
-      <SiteHeader/>
-      <div id="content" className="relative z-50 bg-white">{children}</div>
-      <Footer/>
+      <div className="relative z-10 min-h-90 bg-white">
+        { note.content ? (
+          <Notifictation note={note}/>
+        ) : ""}
+        <SiteHeader/>
+        <div id="content" className="relative z-50">
+          {children}
+        </div>
+        <Footer/>
+      </div>
     </>
   )
 }

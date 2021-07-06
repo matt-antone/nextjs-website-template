@@ -38,7 +38,6 @@ export default function PostPage({ heroSource, source, data, url }) {
         publisherLogo={SEO_LOGO}
         description={ data.page_description || ''}
       />
-      <Hero hero={data.hero}>
       <div  className="max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-8">
         <main className="prose prose-brand-secondary relative z-20">
           <article>
@@ -58,7 +57,6 @@ export default function PostPage({ heroSource, source, data, url }) {
           </article>
         </main>
       </div>
-      </Hero>
     </Layout>
 
   )
@@ -71,7 +69,6 @@ export const getStaticProps = async (context) => {
 
   const { content, data } = matter(source)
   const pageSource = await serialize(content)
-  const heroSource = await serialize(data.hero.hero_text)
 
   console.log(pageSource)
 
@@ -81,7 +78,6 @@ export const getStaticProps = async (context) => {
       url: process.env.BASE_URL+PAGE_DIR+params.slug,
       source: pageSource,
       data: data,
-      heroSource: heroSource,
     },
   }
 }

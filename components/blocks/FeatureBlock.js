@@ -6,7 +6,7 @@ import Icon401k from '../icons/Icon401k'
 import IconFinancialPlanning from '../icons/IconFinancialPlanning'
 import IconInvestmentServices from '../icons/IconInvestmentServices'
 import IconRetirement from '../icons/IconRetirement'
-import CloudinaryImage from '../CloudinaryImage';
+import Image from 'next/image'
 import Block from './Block';
 import BlockContainer from './BlockContainer';
 
@@ -39,7 +39,7 @@ export default function FeatureBlock({features,overview}) {
                           data-aos="flip-left"
                           data-aos-easing="ease-out-cubic"
                           data-aos-duration="2000">
-                          <CloudinaryImage
+                          <Image
                             src={feature.icon}
                             className="-mt-8 h-24 w-24 mx-auto text-white"
                             width={24}
